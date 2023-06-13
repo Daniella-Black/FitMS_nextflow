@@ -52,7 +52,7 @@ res <-FitMS(catalogues = df,
            organ =organ,
            #exposureFilterType="giniScaledThreshold",
            #rareSignatureTier = "T1",
-           minErrorReductionPerc = 25,
+           #minErrorReductionPerc = 25,
            useBootstrap = TRUE, 
            nboot = 200)
 
