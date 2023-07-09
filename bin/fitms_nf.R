@@ -4,6 +4,7 @@ library(signature.tools.lib)
 args = commandArgs(trailingOnly=TRUE)
 sample <- args[1]
 mtr_input <- args[2]
+errorperc <- args[3]
 #fileConn<-file("output.txt")
 #writeLines(c(sample), fileConn)
 #close(fileConn)
@@ -52,7 +53,7 @@ res <-FitMS(catalogues = df,
            organ =organ,
            #exposureFilterType="giniScaledThreshold",
            #rareSignatureTier = "T1",
-           minErrorReductionPerc = 15,
+           minErrorReductionPerc = errorperc,
            useBootstrap = TRUE, 
            nboot = 200)
 
